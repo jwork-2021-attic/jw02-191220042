@@ -1,0 +1,95 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Sorter
+class BubbleSorter
+interface Linable
+enum Gourd
+class Scene
+class Geezer
+class Line
+class Position
+
+Line *-- Position
+Sorter <|.. BubbleSorter
+Geezer *-- Sorter
+Scene <|.. Geezer
+Scene <|.. Line
+Linable -- position
+Geezer <|.. Line
+Geezer <|.. Linable
+Linable<|.. Gourd
+class Line{
+    public Line(int length)
+    private Position[] positions;
+    public void put(Linable linable, int i)
+    public Linable get(int i)
+    public String toString()
+    public Linable[] toArray()
+}
+
+class Position {
+    private Linable linable;
+    Position(Linable linable)
+    public void setLinable(Linable linable)
+
+}
+interface Sorter{
+    public void load(int[] elements);
+    public void sort();
+    public String getPlan();
+}
+class BubbleSorter{
+    private int[] a;
+    public void load(int[] a)
+    private void swap(int i, int j)
+    private String plan = ""
+    public void sort()
+    public String getPlan()
+}
+interface Linable{
+    public void setPosition(Position position);
+    public Position getPosition();
+    public int getValue();
+}
+enum Gourd{
+    ONE
+    TWO
+    THREE
+    FOUR
+    FIVE
+    SIX
+    SEVEN
+
+    private final int r;
+    private final int g;
+    private final int b;
+
+    private Position position;
+
+    Gourd(int r, int g, int b)
+    public static Gourd getGourdByRank(int rank)
+    public int rank()
+    public String toString()
+    public void setPosition(Position position)
+    public Position getPosition()
+    public void swapPosition(Gourd another)
+    public int getValue()
+}
+
+class Geezer{
+    private static Geezer theGeezer;
+    public static Geezer getTheGeezer()
+    private Geezer()
+    private Sorter sorter;
+    public void setSorter(Sorter sorter)
+    private String[] parsePlan(String plan)
+    private void execute(String step)
+}
+class Scene{
+    public static void main(String[] args)
+}
+
+
+
+@enduml
