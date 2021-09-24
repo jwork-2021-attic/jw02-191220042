@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>proj</OriginalElement>
+  <nodes>
+    <node x="287.25" y="0.0">proj.Sorter</node>
+    <node x="467.0" y="277.0">proj.MonsterFactory</node>
+    <node x="0.0" y="458.0">proj.Position</node>
+    <node x="0.0" y="129.0">proj.Monster</node>
+    <node x="363.0" y="458.0">proj.Scene</node>
+    <node x="0.0" y="0.0">proj.Linable</node>
+    <node x="194.0" y="458.0">proj.TestImage</node>
+    <node x="120.0" y="357.0">proj.Square</node>
+    <node x="356.0" y="106.0">proj.QuickSorter</node>
+    <node x="52.0" y="277.0">proj.Formation</node>
+    <node x="281.0" y="277.0">proj.Snake</node>
+    <node x="193.0" y="106.0">proj.BubbleSorter</node>
+    <node x="0.0" y="357.0">proj.Line</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="proj.QuickSorter" target="proj.Sorter" relationship="REALIZATION">
+      <point x="0.0" y="-40.0" />
+      <point x="423.0" y="81.0" />
+      <point x="343.75" y="81.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="proj.Square" target="proj.Formation" relationship="REALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="178.0" y="332.0" />
+      <point x="114.0" y="332.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="proj.BubbleSorter" target="proj.Sorter" relationship="REALIZATION">
+      <point x="0.0" y="-40.0" />
+      <point x="264.5" y="81.0" />
+      <point x="343.75" y="81.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="proj.Line" target="proj.Formation" relationship="REALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="50.0" y="332.0" />
+      <point x="114.0" y="332.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="proj.Monster" target="proj.Linable" relationship="REALIZATION">
+      <point x="0.0" y="-51.5" />
+      <point x="0.0" y="39.5" />
+    </edge>
+  </edges>
+  <settings layout="分层" zoom="1.0" showDependencies="false" x="314.0" y="269.0" />
+  <SelectedNodes>
+    <node>proj.BubbleSorter</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>属性</Category>
+    <Category>构造函数</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

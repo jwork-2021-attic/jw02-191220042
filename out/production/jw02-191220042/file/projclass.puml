@@ -1,0 +1,134 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Sorter
+class Quicksort
+class BubbleSorter
+interface Linable
+interface Formation
+class Snake
+class Scene
+class Monster
+class Line
+class MonsterFactory
+class Position
+class TestImage
+class Square
+
+Sorter <|.. Quicksort
+Formation *-- Position
+Sorter <|.. BubbleSorter
+Snake *-- Sorter
+Scene <|.. Snake
+Scene <|.. Formation
+Linable -- Position
+Snake <|.. Formation
+Snake <|.. Linable
+Linable<|.. Monster
+Formation <|.. Line
+Formation <|.. Square
+Scene *-- MonsterFactory
+Monster <-- MonsterFactory
+TestImage <-- MonsterFactory
+interface Formation{
+    public Linable[] toArray();
+    public void put(Linable linable, int i);
+    public String toString();
+}
+class Square{
+    private int length
+    private Position[][] positions
+    public Square(int length)
+    public void put(Linable linable, int i)
+    public String toString()
+    public Linable[] toArray()
+}
+class Line{
+    public Line(int length)
+    private Position[] positions;
+    public void put(Linable linable, int i)
+    public Linable get(int i)
+    public String toString()
+    public Linable[] toArray()
+}
+
+class TestImage{
+    public static int[] returnRGB(int i)
+}
+class Quicksort{
+    private int[] a;
+    public void load(int[] a)
+    private void swap(int i, int j)
+    private String plan = "";
+    public void sort()
+    private void quickSort(int left, int right)
+    public String getPlan()
+}
+class MonsterFactory{
+    static int number=0;
+    ArrayList<Integer> no=new ArrayList<>();
+    static ArrayList<Monster> army=new ArrayList<>();
+
+    public int getLength()
+    private int length
+    public void initFactory(int length)
+    public Linable product()
+    public static Monster getByrank(int k)
+}
+class Position {
+    private Linable linable;
+    Position(Linable linable)
+    public void setLinable(Linable linable)
+
+}
+interface Sorter{
+    public void load(int[] elements);
+    public void sort();
+    public String getPlan();
+}
+class BubbleSorter{
+    private int[] a;
+    public void load(int[] a)
+    private void swap(int i, int j)
+    private String plan = ""
+    public void sort()
+    public String getPlan()
+}
+interface Linable{
+    public void setPosition(Position position);
+    public Position getPosition();
+    public int getValue();
+}
+class Monster{
+    private int r;
+    private int g;
+    private int b;
+    private int rank;
+    private Position position;
+
+    void setRGB(int r, int g, int b,int rank)
+    public int rank()
+    public String toString()
+    public void setPosition(Position position)
+    public Position getPosition()
+    public void swapPosition(Monster another)
+    public int getValue()
+}
+
+class Snake{
+       private static Snake theSnake;
+       public static Snake getTheSnake()
+       private Snake()
+       private Sorter sorter;
+       public void setSorter(Sorter sorter)
+       public String lineUp(Formation line)
+       private String[] parsePlan(String plan)
+       private void execute(String step)
+}
+class Scene{
+    public static void main(String[] args)
+}
+
+
+
+@enduml

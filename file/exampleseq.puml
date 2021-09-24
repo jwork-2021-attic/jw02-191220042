@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor       葫芦娃七人众   as Gourds #blue
+actor       爷爷  as grandpa  #yellow
+entity      队形  as line
+entity      排队方法 as sorter
+
+
+Gourds -[#Grey]> line : 形成
+note left
+    进入队伍
+end note
+
+grandpa -[#Red]> sorter : 安排
+note right
+    设置排序方法
+end note
+
+line -[#Grey]> Gourds :排队
+
+@enduml

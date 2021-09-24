@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Scene {
     public static void main(String[] args) throws IOException {
 
-        Formation line = new Line(8);
+        Formation line = new Square(8);
         MonsterFactory thefactory = new MonsterFactory();
         thefactory.initFactory(64);
         for(int i=0;i<thefactory.getLength();i++) {
