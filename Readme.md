@@ -16,5 +16,6 @@ example的类图与Scene中main方法执行过程中的对象时序图如下：
 
 
 可视化结果如下：
+
 [![asciicast](https://asciinema.org/a/437763.svg)](https://asciinema.org/a/437763)
 
